@@ -82,3 +82,52 @@ This standard made it practical to build cleaner software architectures in Fortr
 
 GNU Fortran documents support for most of Fortran 2003, and C interop remains one of the most important features from this era.
 
+# Fortran 2008
+Fortran 2008 extended the language in directions especially relevant to HPC and safer expression of parallel or array-oriented work.
+
+Notable changes
+* coarrays for parallel programming
+* DO CONCURRENT
+* submodules
+* more flexible procedures and intrinsics
+* improvements around allocatables and module organization
+
+## Compiler implications
+
+This standard pushed compiler writers to reason about parallel semantics more explicitly. DO CONCURRENT tells the compiler that loop iterations can be treated independently, which creates optimization opportunities. Coarrays introduced a language-level distributed-memory model, though compiler/runtime support has varied.
+
+## Functionality impact
+
+Fortran 2008 made the language more expressive for modern HPC design and large codebases. Submodules helped compilation scaling and encapsulation. Coarrays gave Fortran a native parallel feature, even if MPI remained more widely used in practice.
+
+GNU Fortran states it implements most of Fortran 2008, and GCC maintains specific status tracking for 2008 features.
+
+# Fortran 2018
+Fortran 2018 was another refinement-oriented standard, but an important one for parallel and interoperability semantics.
+
+Main themes
+* consolidation of earlier technical specifications
+* better parallel/coarray semantics
+* further cleanup and clarification of existing features
+* more standardized behavior around C descriptors and interop-related details
+
+## Compiler impact
+
+A lot of the work here was not flashy syntax but harder semantic correctness: better interpretation of parallel semantics, descriptors, and consistency rules. These changes matter because they affect whether advanced code is portable across compilers.
+
+## Practical meaning
+
+Fortran 2018 is often the latest standard with broad enough mindshare to matter in current production compilers. GNU Fortran says it supports some Fortran 2018 features, though coverage varies by feature and compiler version.
+
+# Fortran 2023
+Fortran 2023 is the newest published standard in the Fortran.
+
+## Main direction
+
+It is not a total redesign. It mainly continues the trend of:
+* improving generics-related usability
+* extending enumeration and type-related facilities
+* refining conditional expressions and language ergonomics
+* tightening and correcting semantics from earlier standards
+
+WG5’s feature summary presents it explicitly as a revision of Fortran 2018 plus corrigenda, not a break with the language’s direction. Compiler support is still catching up, so in practice many users write “2018-style modern Fortran” and selectively adopt 2023 features as compilers mature. GNU Fortran’s current project objectives include conformance work for Fortran 2023, and its dialect options already include -std=f2023.
