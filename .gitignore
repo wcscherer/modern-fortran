@@ -1,0 +1,56 @@
+# ------------------------------
+# OS-specific files (macOS/Windows)
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Editor / IDE metadata
+# ------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ------------------------------
+# Fortran compiler artifacts
+# ------------------------------
+*.o
+*.obj
+*.mod
+*.smod
+*.d
+
+# ------------------------------
+# Linked binaries and libraries
+# ------------------------------
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# ------------------------------
+# Build system outputs
+# ------------------------------
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+
+# ------------------------------
+# Logs and temporary files
+# ------------------------------
+*.log
+*.tmp
+
+# ------------------------------
+# Test and coverage artifacts
+# ------------------------------
+coverage/
+*.gcda
+*.gcno
+*.gcov
