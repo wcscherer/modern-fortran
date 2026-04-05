@@ -30,4 +30,8 @@ contains
         call assert_close(square(0.0), 0.0, 1.0e-6, "square(0.0) should be 0.0")
     end subroutine test_square_zero
 
+    subroutine test_square_negative()
+        call assert_close(square(-3.0), 9.0, 1.0e-6, "square(-3.0) should be 9.0")
+    end subroutine test_square_negative
+
 end program check
