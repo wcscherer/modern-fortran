@@ -22,4 +22,8 @@ contains
         end if
     end subroutine assert_close
 
+    subroutine test_square_positive()
+        call assert_close(square(2.0), 4.0, 1.0e-6, "square(2.0) should be 4.0")
+    end subroutine test_square_positive
+
 end program check
