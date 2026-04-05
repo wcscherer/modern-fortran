@@ -26,4 +26,8 @@ contains
         call assert_close(square(2.0), 4.0, 1.0e-6, "square(2.0) should be 4.0")
     end subroutine test_square_positive
 
+    subroutine test_square_zero()
+        call assert_close(square(0.0), 0.0, 1.0e-6, "square(0.0) should be 0.0")
+    end subroutine test_square_zero
+
 end program check
